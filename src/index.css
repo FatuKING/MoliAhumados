@@ -13,3 +13,43 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background-color: #242424;
+}
+
+main{
+  height: 100%;
+  width: 600px;
+  background-color: white;
+}
+
+header {
+  height: 150px;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
+
+.carousel-inner{
+  height: 350px;
+  width: 100%;
+  display: flex;
+  justify-content: center center;
+  align-items: center;
+}
+
+.figure {
+  height: 100px;
+  width: 100x;
+  border: 50%;
+}
+
