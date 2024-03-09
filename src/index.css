@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -40,7 +40,7 @@ header {
 }
 
 .carousel-inner{
-  height: 350px;
+  height: 340px;
   width: 100%;
   display: flex;
   justify-content: center center;
@@ -53,3 +53,51 @@ header {
   border: 50%;
 }
 
+.accordion-button {
+  width: 100%;
+  background-color: aqua;
+}
+
+.title {
+  font-family: 'Lobster', system-ui;
+  line-height: 0.5;
+}
+
+.food {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 5px;
+  padding-bottom: 3px;
+}
+
+.foodCard {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.foodTitle {
+  line-height: 0.4;
+}
+
+.foodDescription {
+  width: 75%;
+  font-size: 14px;
+}
+
+.foodPrice {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.sum {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 100px;
+  bottom: 20px;
+}
