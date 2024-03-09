@@ -1,3 +1,5 @@
+import { FoodCard } from './FoodCard'
+
 export function Foods ({ name, children }) {
   return (
     <>
@@ -8,34 +10,10 @@ export function Foods ({ name, children }) {
           </button>
         </h2>
         <div id='collapseOne' class='accordion-collapse collapse show' data-bs-parent='#accordionFoods'>
-          <div class='food'>
-            <div className='foodCard'>
-              <h3 className='foodTitle'>Classic</h3>
-              <span className='foodDescription'>Sandwich de bondiola Ahumeda, lechuga, tomate, cebolla morada, pepinillos agridulces</span>
-
-              <span className='foodPrice'>$6000</span>
-
-              <button className='btn btn-dark sum rounded'><i class='bi bi-plus-lg' /></button>
-            </div>
-
-            <figure className='figure'>
-              <img src='/SANGUCHES-01.jpg' className='figure-img h-100 w-100 rounded' alt='' />
-            </figure>
-          </div>
-          <div class='food'>
-            <div className='foodCard'>
-              <h3 className='foodTitle'>Classic</h3>
-              <span className='foodDescription'>Sandwich de bondiola Ahumeda, lechuga, tomate, cebolla morada, pepinillos agridulces</span>
-
-              <span className='foodPrice'>$6000</span>
-
-              <button className='btn btn-dark sum rounded'><i class='bi bi-plus-lg' /></button>
-            </div>
-
-            <figure className='figure'>
-              <img src='/SANGUCHES-01.jpg' className='figure-img h-100 w-100 rounded' alt='' />
-            </figure>
-          </div>
+          <FoodCard foodTitle='Classic' foodDescription='Sandwich de bondiola Ahumeda, lechuga, tomate, cebolla morada, pepinillos agridulces' foodPrice='$6000' foodImg='/SANGUCHES-01.jpg' />
+          <FoodCard foodTitle='Big Cheese + Porción de papas fritas' foodDescription='Sandwich de bondiola ahumada, cheddar, salsa thousand island' foodPrice='$7500' foodImg='/SANGUCHES-04.jpg' />
+          <FoodCard foodTitle='Bacon BBQ' foodDescription='Sandwich de bondiola ahumada, panceta, cheddar, barbacoa casera' foodPrice='$8000' foodImg='/SANGUCHES-09.jpg' />
+          <FoodCard foodTitle='Súper Coleslaw' foodDescription='Sandwich de bondiola ahumada, coleslaw, morrones dulces encurtidos' foodPrice='$7000' foodImg='/SANGUCHES-13.jpg' />
         </div>
       </div>
 
