@@ -19,7 +19,7 @@
   box-sizing: border-box;
 }
 
-body{
+#root{
   display: flex;
   justify-content: center;
   height: 100vh;
@@ -84,8 +84,8 @@ header {
 }
 
 .foodDescription {
-  width: 75%;
-  font-size: 14px;
+  width: 85%;
+  font-size: 13px;
 }
 
 .foodPrice {
