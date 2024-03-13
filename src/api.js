@@ -19,8 +19,7 @@ export const api = async (url) => {
   }
 }
 
-// // Uso de la función api
-// api().then(data => {
+// api(url).then(data => {
 //   console.log(data)
 // }).catch(error => {
 //   console.error('Error:', error)

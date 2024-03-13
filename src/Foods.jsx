@@ -20,13 +20,13 @@ export function Foods ({ name, url, id }) {
 
   return (
     <>
-      <div class='accordion-item'>
-        <h2 class='accordion-header text-center'>
-          <button class='foodButton bg-dark text-white' type='button' data-bs-toggle='collapse' data-bs-target={`#${id}`} aria-expanded='false' aria-controls={id}>
+      <div className='accordion-item'>
+        <h2 className='accordion-header text-center'>
+          <button className='foodButton bg-dark text-white' type='button' data-bs-toggle='collapse' data-bs-target={`#${id}`} aria-expanded='false' aria-controls={id}>
             {name}
           </button>
         </h2>
-        <div id={id} class='accordion-collapse collapse show' data-bs-parent='#accordionFoods'>
+        <div id={id} className='accordion-collapse collapse' data-bs-parent='#accordionFoods'>
           {
            data.map((food, index) => {
              return (

@@ -3,7 +3,7 @@ export function Link ({ url, icon, color, size }) {
 
   return (
     <>
-      <a href={url}><i class={nameIco} target='_blank' style={{ color: `${color}`, fontSize: `${size}` }} /></a>
+      <a href={url}><i className={nameIco} target='_blank' style={{ color: `${color}`, fontSize: `${size}` }} /></a>
     </>
   )
 }

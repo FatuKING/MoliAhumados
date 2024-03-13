@@ -1,14 +1,14 @@
 export function FoodCard ({ foodTitle, foodDescription, foodPrice, foodImg }) {
   return (
     <>
-      <div class='food'>
+      <div className='food'>
         <div className='foodCard'>
           <h3 className='foodTitle'>{foodTitle}</h3>
           <span className='foodDescription'>{foodDescription}</span>
 
-          <span className='foodPrice'>{foodPrice}</span>
+          <span className='foodPrice'>{`$${foodPrice}`}</span>
 
-          <button className='btn btn-dark sum rounded'><i class='bi bi-plus-lg' /></button>
+          <button className='btn btn-dark sum rounded'><i className='bi bi-plus-lg' /></button>
         </div>
 
         <figure className='figure'>
