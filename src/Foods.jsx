@@ -1,19 +1,39 @@
 import { FoodCard } from './FoodCard'
+import { api } from './api'
+import { useState, useEffect } from 'react'
 
-export function Foods ({ name, children }) {
+export function Foods ({ name, url, id }) {
+  const [data, setData] = useState([])
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const result = await api(url)
+        setData(result)
+      } catch (error) {
+        console.error('Error fetching data:', error)
+      }
+    }
+
+    fetchData()
+  }, [])
+
   return (
     <>
       <div class='accordion-item'>
         <h2 class='accordion-header text-center'>
-          <button class='accordion-button bg-dark text-white' type='button' data-bs-toggle='collapse' data-bs-target='#collapseOne' aria-expanded='true' aria-controls='collapseOne'>
-            <p className='text-center w-100 aling-item-center'>Sandwich Ahumados</p>
+          <button class='foodButton bg-dark text-white' type='button' data-bs-toggle='collapse' data-bs-target={`#${id}`} aria-expanded='false' aria-controls={id}>
+            {name}
           </button>
         </h2>
-        <div id='collapseOne' class='accordion-collapse collapse show' data-bs-parent='#accordionFoods'>
-          <FoodCard foodTitle='Classic' foodDescription='Sandwich de bondiola Ahumeda, lechuga, tomate, cebolla morada, pepinillos agridulces' foodPrice='$6000' foodImg='/SANGUCHES-01.jpg' />
-          <FoodCard foodTitle='Big Cheese + Porción de papas fritas' foodDescription='Sandwich de bondiola ahumada, cheddar, salsa thousand island' foodPrice='$7500' foodImg='/SANGUCHES-04.jpg' />
-          <FoodCard foodTitle='Bacon BBQ' foodDescription='Sandwich de bondiola ahumada, panceta, cheddar, barbacoa casera' foodPrice='$8000' foodImg='/SANGUCHES-09.jpg' />
-          <FoodCard foodTitle='Súper Coleslaw' foodDescription='Sandwich de bondiola ahumada, coleslaw, morrones dulces encurtidos' foodPrice='$7000' foodImg='/SANGUCHES-13.jpg' />
+        <div id={id} class='accordion-collapse collapse show' data-bs-parent='#accordionFoods'>
+          {
+           data.map((food, index) => {
+             return (
+               <FoodCard key={index} foodTitle={food.product} foodDescription={food.description} foodPrice={food.price} foodImg={food.img} id='collapseOne' />
+             )
+           })
+          }
         </div>
       </div>
 

@@ -53,14 +53,15 @@ header {
   border: 50%;
 }
 
-.accordion-button {
-  width: 100%;
-  background-color: aqua;
-}
-
 .title {
   font-family: 'Lobster', system-ui;
   line-height: 0.5;
+}
+
+.foodButton {
+  width: 100%;
+  padding: 5px;
+  font-size: 24px;
 }
 
 .food {

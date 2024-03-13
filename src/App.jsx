@@ -10,7 +10,6 @@ function App () {
         <Carrusel />
         <header className='container d-flex mt-3'>
           <Logo img='/moliLogo.png' />
-
           <div>
             <h1 className='title'>Moli Ahumado</h1>
             <span className='lh-1'>Carnes Ahumadas</span>
@@ -24,7 +23,9 @@ function App () {
         </div>
 
         <div className='accordion' id='accordionFoods'>
-          <Foods />
+          <Foods name='Sandwich Ahumados' id='collapseOne' url='https://docs.google.com/spreadsheets/d/e/2PACX-1vT7A4gLFc_0px04ZzEpRpYnyuqfL_SDfslOWCBJGnlawBaTfqob5e0XFN2a5u3P5s_ewpjdLbJeOkRB/pub?gid=0&single=true&output=tsv' />
+          <Foods name='Bebidas' id='collapseTwo' url='https://docs.google.com/spreadsheets/d/e/2PACX-1vT7A4gLFc_0px04ZzEpRpYnyuqfL_SDfslOWCBJGnlawBaTfqob5e0XFN2a5u3P5s_ewpjdLbJeOkRB/pub?output=tsv&gid=599689181' />
+          <Foods name='Postres' id='collapseThree' url='https://docs.google.com/spreadsheets/d/e/2PACX-1vT7A4gLFc_0px04ZzEpRpYnyuqfL_SDfslOWCBJGnlawBaTfqob5e0XFN2a5u3P5s_ewpjdLbJeOkRB/pub?output=tsv&gid=1681828816' />
         </div>
       </main>
     </>
