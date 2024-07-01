@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -22,8 +22,17 @@
 #root{
   display: flex;
   justify-content: center;
-  height: 100vh;
-  background-color: #242424;
+  position: absolute;
+  inset: 0;
+  z-index: -10;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  background-repeat: repeat;
+  background-image: 
+      linear-gradient(to right, #f0f0f0 1px, transparent 1px), 
+      linear-gradient(to bottom, #f0f0f0 1px, transparent 1px);
+  background-size: 6rem 4rem;
 }
 
 main{
@@ -45,23 +54,27 @@ header {
   display: flex;
   justify-content: center center;
   align-items: center;
+} 
+
+@media only screen and (max-width: 767px) {
+  .carousel-inner{
+    height: 240px;
+    width: 100%;
+    display: flex;
+    justify-content: center center;
+    align-items: center;
+  } 
 }
 
 .figure {
   height: 100px;
-  width: 100x;
+  width: 100px;
   border: 50%;
 }
 
 .title {
   font-family: 'Lobster', system-ui;
   line-height: 0.5;
-}
-
-.foodButton {
-  width: 100%;
-  padding: 5px;
-  font-size: 24px;
 }
 
 .food {
@@ -72,6 +85,12 @@ header {
   padding-bottom: 3px;
 }
 
+.accordion-button:focus{
+  outline: none;
+  box-shadow: none;
+  color: none;
+}
+
 .foodCard {
   display: flex;
   flex-direction: column;
@@ -80,7 +99,6 @@ header {
 
 .foodTitle {
   font-size: 20px;
-  line-height: 0.4;
 }
 
 .foodDescription {
@@ -95,7 +113,7 @@ header {
 
 .foodImg {
   height: 100%;
-  width: 90px;
+  width: 100px;
   border-radius: 8px;
 }
 

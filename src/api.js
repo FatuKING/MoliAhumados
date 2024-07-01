@@ -18,9 +18,3 @@ export const api = async (url) => {
     throw error
   }
 }
-
-// api(url).then(data => {
-//   console.log(data)
-// }).catch(error => {
-//   console.error('Error:', error)
-// })

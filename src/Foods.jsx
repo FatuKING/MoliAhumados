@@ -22,7 +22,7 @@ export function Foods ({ name, url, id }) {
     <>
       <div className='accordion-item'>
         <h2 className='accordion-header text-center'>
-          <button className='foodButton bg-dark text-white' type='button' data-bs-toggle='collapse' data-bs-target={`#${id}`} aria-expanded='false' aria-controls={id}>
+          <button className='accordion-button bg-light-subtle fs-5 text-black fw-bold' type='button' data-bs-toggle='collapse' data-bs-target={`#${id}`} aria-expanded='false' aria-controls={id}>
             {name}
           </button>
         </h2>
