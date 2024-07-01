@@ -18,7 +18,7 @@ function App () {
         <hr className='container w-75' />
         <div className='container d-flex justify-content-around mb-3'>
           <Link url='https://wa.me/1124037996' icon='whatsapp' color='black' size='24px' />
-          <Link url='tel:+123456789' icon='telephone' color='black' size='24px' />
+          <Link url='tel:+1124037996' icon='telephone' color='black' size='24px' />
           <Link url='https://www.instagram.com/moliahumados/?utm_source=qr&r=nametag' icon='instagram' color='black' size='24px' />
         </div>
 
