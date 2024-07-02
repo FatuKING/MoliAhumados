@@ -67,22 +67,35 @@ header {
 }
 
 .figure {
+  aspect-ratio: 1/1;
   height: 100px;
-  width: 100px;
   border: 50%;
 }
 
+.figureImg{
+  aspect-ratio: 1/1;
+  height: 120px;
+  padding: 10px;
+}
+
+.img {
+  height: 100%;
+  width: 100%;
+}
+
+/* Moli Ahumado Titulo  */
 .title {
   font-family: 'Lobster', system-ui;
   line-height: 0.5;
 }
 
 .food {
+  height: 120px;
+  padding-left: 22px;
+}
+
+.foodContainer{
   display: flex;
-  justify-content: space-between;
-  position: relative;
-  padding: 5px;
-  padding-bottom: 3px;
 }
 
 .accordion-button:focus{
@@ -94,11 +107,7 @@ header {
 .foodCard {
   display: flex;
   flex-direction: column;
-  padding: 10px;
-}
-
-.foodTitle {
-  font-size: 20px;
+  padding-top: 10px;
 }
 
 .foodDescription {
@@ -106,28 +115,8 @@ header {
   font-size: 13px;
 }
 
-.foodPrice {
-  font-size: 16px;
-  font-weight: 600;
-}
 
-.foodImg {
-  height: 100%;
-  width: 100px;
-  border-radius: 8px;
-}
-
-.sum {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  right: 100px;
-  bottom: 20px;
-}
-
+/* Boton open */
 .position-x {
   font-size: 14px;
   bottom: 10px;

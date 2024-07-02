@@ -2,17 +2,19 @@ export function FoodCard ({ foodTitle, foodDescription, foodPrice, foodImg }) {
   return (
     <>
       <section className='food'>
-        <article className='foodCard'>
-          <h3 className='foodTitle fw-semibold'>{foodTitle}</h3>
-          <span className='foodDescription fs-6'>{foodDescription}</span>
+        <article className='foodContainer'>
+          <div className='foodCard'>
+            <h3 className='fs-5 fw-bold'>{foodTitle}</h3>
+            <span className='foodDescription text-body-secondary fw-semibold'>{foodDescription}</span>
 
-          <span className='foodPrice'>{`$${foodPrice}`}</span>
+            <span className='fw-bold'>{`$${foodPrice}`}</span>
 
+          </div>
+
+          <figure className='figureImg'>
+            <img src={foodImg} className='img rounded' alt='' />
+          </figure>
         </article>
-
-        <figure className='figure'>
-          <img src={foodImg} className='figure-img img-fluid rounded' alt='' />
-        </figure>
       </section>
     </>
   )

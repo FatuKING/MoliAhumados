@@ -12,7 +12,7 @@ function App () {
           <Logo img='/moliLogo.png' />
           <div>
             <h1 className='title'>Moli Ahumados</h1>
-            <span className='lh-1'>Carnes Ahumadas</span>
+            <span className='lh-1 fw-semibold text-body-secondary fst-italic'>Carnes Ahumadas</span>
           </div>
         </header>
         <hr className='container w-75' />
