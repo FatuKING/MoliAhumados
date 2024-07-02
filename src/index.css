@@ -127,3 +127,9 @@ header {
   right: 100px;
   bottom: 20px;
 }
+
+.position-x {
+  font-size: 14px;
+  bottom: 10px;
+  right: 10px;
+}

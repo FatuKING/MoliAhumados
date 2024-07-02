@@ -19,6 +19,7 @@ function App () {
         <div className='container d-flex justify-content-around mb-3'>
           <Link url='https://wa.me/1124037996' icon='whatsapp' color='black' size='24px' />
           <Link url='tel:+1124037996' icon='telephone' color='black' size='24px' />
+          <Link url='https://maps.app.goo.gl/RDNqUVYAN5ENfk8j6' icon='geo-alt' color='black' size='24px' />
           <Link url='https://www.instagram.com/moliahumados/?utm_source=qr&r=nametag' icon='instagram' color='black' size='24px' />
         </div>
 
