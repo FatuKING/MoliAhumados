@@ -133,8 +133,8 @@ header {
 .imgBackground {
   position: absolute;
   display: grid;
-  height: 400px;
-  width: 400px;
+  height: 300px;
+  width: 300px;
   place-items: center;
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 2;

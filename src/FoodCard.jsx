@@ -28,7 +28,7 @@ export function FoodCard ({ foodTitle, foodDescription, foodPrice, foodImg }) {
 
       {
         viewImg ? <ImgExpand img={foodImg} showImg={showImg} /> : null
-        }
+      }
 
     </>
   )
