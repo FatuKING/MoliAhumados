@@ -115,10 +115,27 @@ header {
   font-size: 13px;
 }
 
-
 /* Boton open */
 .position-x {
   font-size: 14px;
   bottom: 10px;
   right: 10px;
+}
+
+.contenedorImg{
+  position: relative;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  z-index: 2;
+}
+
+.imgBackground {
+  position: absolute;
+  display: grid;
+  height: 400px;
+  width: 400px;
+  place-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 2;
 }

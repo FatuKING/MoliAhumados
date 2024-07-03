@@ -1,4 +1,13 @@
+import { useState } from 'react'
+import { ImgExpand } from './ImgExpand'
+
 export function FoodCard ({ foodTitle, foodDescription, foodPrice, foodImg }) {
+  const [viewImg, setViewImg] = useState(false)
+
+  const showImg = () => {
+    setViewImg(!viewImg)
+  }
+
   return (
     <>
       <section className='food'>
@@ -12,10 +21,15 @@ export function FoodCard ({ foodTitle, foodDescription, foodPrice, foodImg }) {
           </div>
 
           <figure className='figureImg'>
-            <img src={foodImg} className='img rounded' alt='' />
+            <img onClick={showImg} src={foodImg} className='img rounded' alt='' />
           </figure>
         </article>
       </section>
+
+      {
+        viewImg ? <ImgExpand img={foodImg} showImg={showImg} /> : null
+        }
+
     </>
   )
 }

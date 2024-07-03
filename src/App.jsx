@@ -28,8 +28,6 @@ function App () {
           <Foods name='Sandwich Ahumados' id='collapseTwo' url='https://docs.google.com/spreadsheets/d/e/2PACX-1vT7A4gLFc_0px04ZzEpRpYnyuqfL_SDfslOWCBJGnlawBaTfqob5e0XFN2a5u3P5s_ewpjdLbJeOkRB/pub?gid=0&single=true&output=tsv' />
           <Foods name='Empanadas' id='collapseThree' url='https://docs.google.com/spreadsheets/d/e/2PACX-1vT7A4gLFc_0px04ZzEpRpYnyuqfL_SDfslOWCBJGnlawBaTfqob5e0XFN2a5u3P5s_ewpjdLbJeOkRB/pub?output=tsv&gid=2069364023' />
           <Foods name='Pizzas' id='collapseFour' url='https://docs.google.com/spreadsheets/d/e/2PACX-1vT7A4gLFc_0px04ZzEpRpYnyuqfL_SDfslOWCBJGnlawBaTfqob5e0XFN2a5u3P5s_ewpjdLbJeOkRB/pub?output=tsv&gid=1517100391' />
-          <Foods name='Bebidas' id='collapseFive' url='https://docs.google.com/spreadsheets/d/e/2PACX-1vT7A4gLFc_0px04ZzEpRpYnyuqfL_SDfslOWCBJGnlawBaTfqob5e0XFN2a5u3P5s_ewpjdLbJeOkRB/pub?output=tsv&gid=599689181' />
-          <Foods name='Postres' id='collapseSix' url='https://docs.google.com/spreadsheets/d/e/2PACX-1vT7A4gLFc_0px04ZzEpRpYnyuqfL_SDfslOWCBJGnlawBaTfqob5e0XFN2a5u3P5s_ewpjdLbJeOkRB/pub?output=tsv&gid=1681828816' />
         </div>
       </main>
     </>
