@@ -1,7 +1,19 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { clock } from '../logic/clock.js'
 
 export function Carrusel () {
-  const [open, setOpen] = useState(true)
+  const [open, setOpen] = useState(clock())
+
+  useEffect(() => {
+    const openRestaurant = () => {
+      const status = clock()
+      setOpen(status)
+    }
+
+    const interval = setInterval(openRestaurant, 4500)
+
+    return () => clearInterval(interval)
+  }, [])
 
   return (
     <>

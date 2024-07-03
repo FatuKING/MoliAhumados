@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ImgExpand } from './ImgExpand'
+import { ImgExpand } from './ImgExpand.jsx'
 
 export function FoodCard ({ foodTitle, foodDescription, foodPrice, foodImg }) {
   const [viewImg, setViewImg] = useState(false)

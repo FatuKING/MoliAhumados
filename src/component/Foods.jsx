@@ -1,5 +1,5 @@
-import { FoodCard } from './FoodCard'
-import { api } from './api'
+import { FoodCard } from './FoodCard.jsx'
+import { api } from '../logic/api.js'
 import { useState, useEffect } from 'react'
 
 export function Foods ({ name, url, id }) {

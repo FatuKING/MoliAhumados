@@ -1,7 +1,7 @@
-import { Carrusel } from './Carrusel.jsx'
-import { Link } from './Link.jsx'
-import { Logo } from './Logo.jsx'
-import { Foods } from './Foods.jsx'
+import { Carrusel } from './component/Carrusel.jsx'
+import { Link } from './component/Link.jsx'
+import { Logo } from './component/Logo.jsx'
+import { Foods } from './component/Foods.jsx'
 
 function App () {
   return (
