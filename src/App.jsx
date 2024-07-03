@@ -8,14 +8,15 @@ function App () {
     <>
       <main className='shadow-lg'>
         <Carrusel />
-        <header className='container d-flex mt-3'>
+        <header className='container d-flex gap-5 mt-3'>
           <Logo img='/moliLogo.png' />
           <div>
             <h1 className='title'>Moli Ahumados</h1>
             <span className='lh-1 fw-semibold text-body-secondary fst-italic'>Carnes Ahumadas</span>
           </div>
         </header>
-        <hr className='container w-75' />
+
+        <hr className='container' />
         <div className='container d-flex justify-content-around mb-3'>
           <Link url='https://wa.me/1124037996' icon='whatsapp' color='black' size='24px' />
           <Link url='tel:+1124037996' icon='telephone' color='black' size='24px' />

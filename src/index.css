@@ -68,7 +68,7 @@ header {
 
 .figure {
   aspect-ratio: 1/1;
-  height: 100px;
+  height: 120px;
   border: 50%;
 }
 
@@ -90,7 +90,7 @@ header {
 }
 
 .food {
-  height: 120px;
+  height: auto;
   padding-left: 22px;
 }
 
@@ -136,6 +136,5 @@ header {
   height: 300px;
   width: 300px;
   place-items: center;
-  background-color: rgba(0, 0, 0, 0.3);
   z-index: 2;
 }
