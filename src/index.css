@@ -90,12 +90,14 @@ header {
 }
 
 .food {
+  width: 100%;
   height: auto;
   padding-left: 22px;
 }
 
 .foodContainer{
   display: flex;
+  justify-content: space-between;
 }
 
 .accordion-button:focus{
