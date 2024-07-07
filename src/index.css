@@ -124,6 +124,10 @@ header {
   right: 10px;
 }
 
+.bottom-1{
+  bottom: 26px;
+}
+
 .contenedorImg{
   position: relative;
   width: 100%;
