@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ImgExpand } from './ImgExpand.jsx'
+import { ModalImg } from './Portals/ModalImg.jsx'
 
 export function FoodCard ({ foodTitle, foodDescription, foodPrice, foodImg }) {
   const [viewImg, setViewImg] = useState(false)
@@ -27,7 +27,7 @@ export function FoodCard ({ foodTitle, foodDescription, foodPrice, foodImg }) {
       </section>
 
       {
-        viewImg ? <ImgExpand img={foodImg} showImg={showImg} /> : null
+        viewImg ? <ModalImg img={foodImg} showImg={showImg} /> : null
       }
 
     </>
