@@ -13,8 +13,8 @@ export function FoodCard ({ foodTitle, foodDescription, foodPrice, foodImg }) {
       <section className='food'>
         <article className='foodContainer'>
           <div className='foodCard position-relative'>
-            <h3 className='fs-5 fw-bold'>{foodTitle}</h3>
-            <span className='foodDescription text-body-secondary fw-semibold'>{foodDescription}</span>
+            <h3 className='fs-5 fw-bold lh-1'>{foodTitle}</h3>
+            <span className='foodDescription text-body-secondary fw-semibold lh-sm'>{foodDescription}</span>
 
             <span className='fw-bold position-absolute bottom-1'>{`$${foodPrice}`}</span>
 
