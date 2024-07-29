@@ -27,13 +27,7 @@ export function Foods ({ name, url, id }) {
           </button>
         </h2>
         <div id={id} className='accordion-collapse collapse contenedorImg' data-bs-parent='#accordionFoods'>
-          {
-           data.map((food, index) => {
-             return (
-               <FoodCard key={index} foodTitle={food.product} foodDescription={food.description} foodPrice={food.price} foodImg={food.img} id='collapseOne' />
-             )
-           })
-          }
+          <FoodCard products={data} id='collapseOne' />
         </div>
       </div>
 

@@ -1,35 +1,30 @@
-import { useState } from 'react'
-import { ModalImg } from './Portals/ModalImg.jsx'
+import { useCart } from '../hooks/useCart.js'
+import { ShowImg } from './ShowImg.jsx'
 
-export function FoodCard ({ foodTitle, foodDescription, foodPrice, foodImg }) {
-  const [viewImg, setViewImg] = useState(false)
-
-  const showImg = () => {
-    setViewImg(!viewImg)
-  }
+export function FoodCard ({ products }) {
+  const { addToCart } = useCart()
 
   return (
     <>
-      <section className='food'>
-        <article className='foodContainer'>
-          <div className='foodCard position-relative'>
-            <h3 className='fs-5 fw-bold lh-1'>{foodTitle}</h3>
-            <span className='foodDescription text-body-secondary fw-semibold lh-sm'>{foodDescription}</span>
-
-            <span className='fw-bold position-absolute bottom-1'>{`$${foodPrice}`}</span>
-
-          </div>
-
-          <figure className='figureImg'>
-            <img onClick={showImg} src={foodImg} className='img rounded' alt='' />
-          </figure>
-        </article>
-      </section>
-
       {
-        viewImg ? <ModalImg img={foodImg} showImg={showImg} /> : null
-      }
+        products.map((product, index) => {
+          return (
+            <section key={index} className='food'>
+              <article className='foodContainer'>
+                <div className='foodCard position-relative'>
+                  <h3 className='fs-5 fw-bold lh-1'>{product.product}</h3>
+                  <span className='foodDescription text-body-secondary fw-semibold lh-sm'>{product.description}</span>
 
+                  <span className='fw-bold position-absolute bottom-1'>{`$${product.price}`}</span>
+                  <button className='btn btn-dark btnCart position-absolute bottom-1 end-0 rounded' onClick={() => addToCart(product)}><i className='bi bi-plus-lg' /></button>
+                </div>
+
+                <ShowImg img={product.img} />
+              </article>
+            </section>
+          )
+        })
+      }
     </>
   )
 }
