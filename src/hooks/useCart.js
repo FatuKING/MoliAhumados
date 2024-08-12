@@ -2,7 +2,11 @@ import { useContext } from 'react'
 import { CartContext } from '../context/cartContext.jsx'
 
 export function useCart () {
-  const { cart, viewCart, addToCart, handleView, setCart, resetCart, deleteItemCart } = useContext(CartContext)
+  const context = useContext(CartContext)
 
-  return { cart, setCart, addToCart, resetCart, viewCart, handleView, deleteItemCart }
+  if (context === undefined) {
+    throw new Error('useCart must be used within a CartProvider')
+  }
+
+  return context
 }
