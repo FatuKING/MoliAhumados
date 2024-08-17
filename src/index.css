@@ -43,11 +43,35 @@ main{
 
 .cart{
   width: 600px;
-  height: 100vh;
-  position: fixed;
+  height: 100%;
   display: grid;
+  position: absolute;
   place-items: center;
   z-index: 30;
+}
+
+.cartImg{
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+}
+
+@media (max-width: 515px) {
+  .cart{
+    width: 100vw;
+  }
+
+  .cartMain{
+    width: 100vw;
+    height: 100%;
+  }
+
+  .cartImg{
+    height: 100px;
+    width: 80px;
+    object-fit: cover;
+  }
+  
 }
 
 header {

@@ -6,7 +6,7 @@ import { useCart } from './hooks/useCart.js'
 import { Cart } from './component/Cart.jsx'
 
 function App () {
-  const { viewCart, handleView } = useCart()
+  const { state, viewCart, handleView } = useCart()
 
   return (
     <>
@@ -26,7 +26,7 @@ function App () {
           <Link url='https://wa.me/1124037996' icon='whatsapp' color='black' size='24px' />
           <Link url='tel:+1124037996' icon='telephone' color='black' size='24px' />
           <Link url='https://maps.app.goo.gl/RDNqUVYAN5ENfk8j6' icon='geo-alt' color='black' size='24px' />
-          <i className='bi bi-cart4' style={{ color: 'black', fontSize: '24px', cursor: 'pointer' }} onClick={handleView} />
+          <button className=''><i className='bi bi-cart4' style={{ fontSize: '24px' }} onClick={handleView} /></button>
         </div>
 
         <div className='accordion' id='accordionFoods'>

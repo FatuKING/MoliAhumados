@@ -9,25 +9,25 @@ export function Cart () {
   return (
     <>
       <div className='cart'>
-        <main className=''>
+        <main className='cartMain'>
           <header className='container d-flex justify-content-between align-items-center' style={{ height: '100px' }}>
             <button className='btn btn-sm' onClick={closeCart}>
               <i className='bi bi-arrow-left' style={{ fontSize: '24px' }} />
             </button>
 
-            <h3 className='fw-semibold'>Detalles del Pedido</h3>
+            <h1 className='fw-semibold fs-4'>Detalles del Pedido</h1>
           </header>
 
-          <h6 className='bg-dark text-white text-center fw-semibold p-2 text-uppercase m-0'>Productos</h6>
+          <h2 className='bg-dark text-white text-center fw-semibold p-2 text-uppercase m-0 fs-5'>Productos</h2>
           <section className='d-flex flex-column'>
             {
                 state.map((products, index) => {
                   return (
                     <article key={index} className='d-flex justify-content-between align-items-center' style={{ height: '100px' }}>
-                      <img src={products.img} alt='' className='' style={{ height: '100px', width: '100px', objectFit: 'cover' }} />
+                      <img src={products.img} alt='' className='cartImg' />
 
                       <div className='d-flex justify-content-start' style={{ width: '120px' }}>
-                        <h6 className='fs-6 fw-semibold'>{products.product}</h6>
+                        <h3 className='fs-6 fw-semibold'>{products.product}</h3>
                       </div>
 
                       <div className='d-flex justify-content-between align-items-center' style={{ width: '100px' }}>
@@ -47,7 +47,7 @@ export function Cart () {
               <button className='btn btn-link text-black' onClick={resetToCart}>Limpiar Carrito</button>
             </div>
             <article className='d-flex flex-column pt-4'>
-              <h6 className='bg-dark text-white text-center fw-semibold p-2 text-uppercase'>Forma de pago</h6>
+              <h2 className='bg-dark text-white text-center fw-semibold p-2 text-uppercase fs-5'>Forma de pago</h2>
               <div className='d-flex flex-column container'>
                 <label className='fs-5' htmlFor={idCheckboxCash}>
                   <input className='' type='radio' id={idCheckboxCash} /> Efectivo
