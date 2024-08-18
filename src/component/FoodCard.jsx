@@ -16,7 +16,7 @@ export function FoodCard ({ products }) {
                   <span className='foodDescription text-body-secondary fw-semibold lh-sm'>{product.description}</span>
 
                   <span className='fw-bold position-absolute bottom-1'>{`$${product.price}`}</span>
-                  <button className='btn btn-dark btnCart position-absolute bottom-1 end-0 rounded' onClick={() => addToCart(product)}><i className='bi bi-plus-lg' /></button>
+                  <button className='btn btn-dark btnAddCart position-absolute bottom-1 end-0 rounded' onClick={() => addToCart(product)}><i className='bi bi-plus-lg' /></button>
                 </div>
 
                 <ShowImg img={product.img} />

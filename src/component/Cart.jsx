@@ -1,10 +1,18 @@
-import { useId } from 'react'
+import { useId, useRef } from 'react'
 import { useCart } from '../hooks/useCart.js'
+import { finalizeOrder } from '../logic/comandWpp.js'
 
 export function Cart () {
   const { state, increaseItemQuantity, decreaseItemQuantity, resetToCart, closeCart, deleteItemCart, subTotal } = useCart()
   const idCheckboxCash = useId()
   const idCheckboxMP = useId()
+
+  const cashRef = useRef(null)
+
+  const handleFinalizeOrder = () => {
+    const selectedPaymentMethod = cashRef.current.checked ? 'Efectivo' : 'Mercado Pago'
+    finalizeOrder(state, selectedPaymentMethod)
+  }
 
   return (
     <>
@@ -48,28 +56,25 @@ export function Cart () {
             </div>
             <article className='d-flex flex-column pt-4'>
               <h2 className='bg-dark text-white text-center fw-semibold p-2 text-uppercase fs-5'>Forma de pago</h2>
-              <div className='d-flex flex-column container'>
-                <label className='fs-5' htmlFor={idCheckboxCash}>
-                  <input className='' type='radio' id={idCheckboxCash} /> Efectivo
+              <form className='d-flex flex-column container'>
+                <label className='fs-5 labelCheck' htmlFor={idCheckboxCash}>
+                  <input ref={cashRef} type='radio' id={idCheckboxCash} name='paymentMethod' /> <span>Efectivo</span>
+                  <span className='checkmark' />
                 </label>
 
-                <label className='fs-5' htmlFor={idCheckboxMP}>
-                  <input type='radio' id={idCheckboxMP} style={{ height: '1.5rem' }} /> Mercado Pago
+                <label className='fs-5 labelCheck' htmlFor={idCheckboxMP}>
+                  <input type='radio' id={idCheckboxMP} style={{ height: '1.5rem' }} name='paymentMethod' /> Mercado Pago
+                  <span className='checkmark' />
                 </label>
-              </div>
+              </form>
             </article>
 
-            <article className='container'>
-              <label htmlFor=''> CUPÓN DE DESCUENTO: <input className='' type='text' placeholder='Ingrese cupon' />
-              </label>
-            </article>
-
-            <article className='d-flex flex-column align-items-center pt-5'>
+            <article className='d-flex flex-column align-items-center pt-5 mb-3'>
               <div className='d-flex justify-content-between align-items-center pb-1' style={{ width: '60%' }}>
                 <span className='fw-semibold'>Total:</span>
                 <span className='fw-semibold'>${subTotal}</span>
               </div>
-              <button className='btn btn-dark rounded fw-semibold text-uppercase' style={{ width: '60%' }}>Confirmar Pedido</button>
+              <button className='btn btn-dark rounded fw-semibold text-uppercase' style={{ width: '60%' }} onClick={handleFinalizeOrder}>Confirmar Pedido</button>
             </article>
           </section>
         </main>
