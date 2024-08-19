@@ -1,14 +1,14 @@
 const phoneNumber = '5491124037996'
 
 const generateMessage = (cart, paymentType) => {
-  let message = 'Hola, quiero realizar el siguiente pedido:\n'
+  let message = '*Hola, quiero realizar el siguiente pedido:*\n'
 
   cart.forEach(item => {
-    message += `- ${item.product} x ${item.quantity} (${item.priceEnd} c/u)\n`
+    message += `*- ${item.product} x ${item.quantity} ($${item.priceEnd} c/u)*\n`
   })
 
-  message += `\nForma de pago: ${paymentType}\n`
-  message += `\nTotal: ${calculateTotal(cart)}\n`
+  message += `\n*Forma de pago: ${paymentType}*\n`
+  message += `\n*Total: ${calculateTotal(cart)}*\n`
 
   return message
 }
