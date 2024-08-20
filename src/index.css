@@ -50,6 +50,11 @@ main{
   z-index: 30;
 }
 
+.cartText {
+  text-align: center;
+  font-size: 18px;
+}
+
 .cartImg{
   height: 100px;
   width: 100px;
@@ -92,7 +97,14 @@ main{
     width: 80px;
     object-fit: cover;
   }
-  
+
+  .cartText {
+    font-size: 14px;
+  }
+
+  .foodContainer{
+    height: 150px;
+  }
 }
 
 header {
@@ -277,7 +289,6 @@ header {
   }
 }
 
-/* Estilos para el label que envuelve al radio button */
 .labelCheck {
   position: relative;
   padding-left: 25px;
@@ -288,12 +299,10 @@ header {
   color: #333;
 }
 
-/* Ocultar el radio button predeterminado */
 .labelCheck input[type="radio"] {
   display: none;
 }
 
-/* Crear el nuevo "radio button" */
 .labelCheck .checkmark {
   position: absolute;
   top: 15;
@@ -304,17 +313,14 @@ header {
   border-radius: 50%;
 }
 
-/* Efecto al hacer hover */
 .labelCheck:hover input ~ .checkmark {
   background-color: #4e4e4e;
 }
 
-/* Cuando el radio button está seleccionado */
 .labelCheck input:checked ~ .checkmark {
   background-color: #000000;
 }
 
-/* Crear el indicador dentro del "radio button" */
 .labelCheck .checkmark::after {
   content: "";
   position: absolute;
