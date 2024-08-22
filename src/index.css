@@ -61,6 +61,18 @@ main{
   object-fit: cover;
 }
 
+.inputCart{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 3px;
+  width: 300px;
+}
+
+.inputCart:focus{
+  box-shadow: none;
+  border-color: #000000;
+}
+
 .btnCart {
   text-align: center;
   font-size: 24px;
@@ -339,3 +351,4 @@ header {
   border-radius: 50%;
   background: white;
 }
+

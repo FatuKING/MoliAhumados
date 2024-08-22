@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { clock } from '../logic/clock.js'
 
 export function Carrusel () {
-  const [open, setOpen] = useState(clock())
+  const [open, setOpen] = useState(() => clock())
 
   useEffect(() => {
     const openRestaurant = () => {
@@ -21,11 +21,11 @@ export function Carrusel () {
         <div className='carousel-inner'>
 
           <div className='carousel-item active'>
-            <img src='/SANGUCHES-1.jpg' className='d-block w-100' alt='SANGUCHES-1.jpg' />
+            <img src='/SANGUCHES-2.jpg' className='d-block w-100' alt='SANGUCHES-2.jpg' />
           </div>
 
           <div className='carousel-item'>
-            <img src='/SANGUCHES-2.jpg' className='d-block w-100' alt='SANGUCHES-2.jpg' />
+            <img src='/SANGUCHES-1.jpg' className='d-block w-100' alt='SANGUCHES-1.jpg' />
           </div>
 
           <div className='carousel-item'>

@@ -114,10 +114,6 @@ export function CartProvider ({ children }) {
     setViewCart(!viewCart)
   }
 
-  const subTotal = state.reduce((accumulator, product) => {
-    return accumulator + Number(product.priceEnd)
-  }, 0).toLocaleString('es-ES')
-
   return (
     <CartContext.Provider value={{
       state,
@@ -128,8 +124,7 @@ export function CartProvider ({ children }) {
       deleteItemCart,
       resetToCart,
       increaseItemQuantity,
-      decreaseItemQuantity,
-      subTotal
+      decreaseItemQuantity
     }}
     >
       {children}

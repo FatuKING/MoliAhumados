@@ -24,8 +24,8 @@ export function BodyPage () {
         <hr className='container' />
 
         <div className='container d-flex justify-content-around mb-3'>
-          <Link url='https://wa.me/1124037996' icon='whatsapp' color='black' size='24px' />
-          <Link url='tel:+1124037996' icon='telephone' color='black' size='24px' />
+          <Link url='https://wa.me/5491124037996' icon='whatsapp' color='black' size='24px' />
+          <Link url='tel:5491124037996' icon='telephone' color='black' size='24px' />
           <Link url='https://maps.app.goo.gl/RDNqUVYAN5ENfk8j6' icon='geo-alt' color='black' size='24px' />
           <button className='bi bi-cart4 btnCart' onClick={handleView}>{numberOfItems ? <div className='numberCart jello-horizontal'>{numberOfItems}</div> : null} </button>
         </div>
