@@ -7,18 +7,18 @@ const generateMessage = (cart, formData) => {
     message += `*- ${item.product} x ${item.quantity} ($${item.priceEnd})*\n`
   })
 
-  message += `\nForma de entrega: *${formData.deliveryMethod}*`
+  message += `\n*Forma de entrega: ${formData.deliveryMethod}*`
   if (formData.deliveryMethod === 'Take Away') {
-    message += `\nRetira: *${formData.nameClient}*`
+    message += `\n*Retira: ${formData.nameClient}*`
   } else {
-    message += `\nDirreción: *${formData.addressClient}*`
+    message += `\n*Dirreción: ${formData.addressClient}*`
   }
-  message += `\nForma de pago: *${formData.paymentMethod}*\n`
+  message += `\n*Forma de pago: ${formData.paymentMethod}*\n`
 
   if (formData.deliveryMethod === 'Delivery') {
-    message += `\nTotal: *${calculateTotal(cart, true)}*\n`
+    message += `\n*Total: ${calculateTotal(cart, true)}*\n`
   } else {
-    message += `\nTotal: *${calculateTotal(cart, false)}*\n`
+    message += `\n*Total: ${calculateTotal(cart, false)}*\n`
   }
 
   return message
