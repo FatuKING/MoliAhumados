@@ -31,9 +31,9 @@ export function BodyPage () {
         </div>
 
         <div className='accordion' id='accordionFoods'>
-          <Foods name='Promociónes' id='collapseOne' url='https://docs.google.com/spreadsheets/d/e/2PACX-1vT7A4gLFc_0px04ZzEpRpYnyuqfL_SDfslOWCBJGnlawBaTfqob5e0XFN2a5u3P5s_ewpjdLbJeOkRB/pub?output=tsv&gid=492732216' />
-          <Foods name='Sandwich Ahumados' id='collapseTwo' url='https://docs.google.com/spreadsheets/d/e/2PACX-1vT7A4gLFc_0px04ZzEpRpYnyuqfL_SDfslOWCBJGnlawBaTfqob5e0XFN2a5u3P5s_ewpjdLbJeOkRB/pub?gid=0&single=true&output=tsv' />
-          <Foods name='Empanadas' id='collapseThree' url='https://docs.google.com/spreadsheets/d/e/2PACX-1vT7A4gLFc_0px04ZzEpRpYnyuqfL_SDfslOWCBJGnlawBaTfqob5e0XFN2a5u3P5s_ewpjdLbJeOkRB/pub?output=tsv&gid=2069364023' />
+          <Foods name='Promociónes' id='collapseOne' url={import.meta.env.VITE_API_PROMOTIONS} />
+          <Foods name='Sandwich Ahumados' id='collapseTwo' url={import.meta.env.VITE_API_SANDWICHS} />
+          <Foods name='Empanadas' id='collapseThree' url={import.meta.env.VITE_API_EMPANADAS} />
         </div>
       </main>
 
