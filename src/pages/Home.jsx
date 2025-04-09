@@ -1,13 +1,26 @@
 import { useCart } from '../hooks/useCart.js'
-import { Carrusel } from './Carrusel.jsx'
-import { Logo } from './Logo.jsx'
-import { Link } from './Link.jsx'
-import { Foods } from './Foods.jsx'
+import { Link } from 'react-router-dom'
+import { Carrusel } from '../component/Carrusel.jsx'
+import { Logo } from '../component/Logo.jsx'
+import { Foods } from '../component/Foods.jsx'
 
-export function BodyPage () {
+export function Home () {
   const { state, handleView } = useCart()
 
   const numberOfItems = state.length
+
+  const urlLink = [{
+    url: 'https://wa.me/5491124037996',
+    icon: 'bi bi-whatsapp'
+  },
+  {
+    url: 'tel:5491124037996',
+    icon: 'bi bi-telephone'
+  },
+  {
+    url: 'https://maps.app.goo.gl/RDNqUVYAN5ENfk8j6',
+    icon: 'bi bi-geo-alt'
+  }] 
 
   return (
     <>
@@ -24,10 +37,12 @@ export function BodyPage () {
         <hr className='container' />
 
         <div className='container d-flex justify-content-around mb-3'>
-          <Link url='https://wa.me/5491124037996' icon='whatsapp' color='black' size='24px' />
-          <Link url='tel:5491124037996' icon='telephone' color='black' size='24px' />
-          <Link url='https://maps.app.goo.gl/RDNqUVYAN5ENfk8j6' icon='geo-alt' color='black' size='24px' />
-          <button className='bi bi-cart4 btnCart' onClick={handleView}>{numberOfItems ? <div className='numberCart jello-horizontal'>{numberOfItems}</div> : null} </button>
+          {
+            urlLink.map((link, index) => (
+              <a key={index} href={link.url} target='_blank' rel='noreferrer'> <i className={link.icon} style={{ color: 'black', fontSize: '24px' }}></i> </a>
+            ))
+          }
+          <Link to='/cart' className='bi bi-cart4 btnCart' onClick={handleView}>{numberOfItems ? <div className='numberCart jello-horizontal'>{numberOfItems}</div> : null} </Link>
         </div>
 
         <div className='accordion' id='accordionFoods'>

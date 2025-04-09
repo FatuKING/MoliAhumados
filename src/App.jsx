@@ -1,15 +1,18 @@
-import { useCart } from './hooks/useCart.js'
-import { Cart } from './component/Cart.jsx'
-import { BodyPage } from './component/BodyPage.jsx'
+import { Cart } from './pages/Cart.jsx'
+import { Home } from './pages/Home.jsx'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 function App () {
-  const { viewCart } = useCart()
-
   return (
     <>
-      {
-        viewCart ? <Cart /> : <BodyPage />
-      }
+      <main>
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/cart' element={<Cart />} />
+          </Routes>
+        </BrowserRouter>
+      </main>
     </>
   )
 }
