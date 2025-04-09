@@ -41,7 +41,7 @@ export function Carrusel() {
         <div className="carousel-inner">
           <div className="carousel-item active">
             <img
-              src="/Sandwich05.jpg"
+              src="/Sandwich05.webp"
               className="d-block w-100 object-fit-cover"
               style={{ height: '500px', objectFit: 'cover' }}
               alt="Sandwich 00"
@@ -49,7 +49,7 @@ export function Carrusel() {
           </div>
           <div className="carousel-item">
             <img
-              src="/Sandwich00.jpg"
+              src="/Sandwich00.webp"
               className="d-block w-100 object-fit-cover"
               style={{ height: '500px', objectFit: 'cover' }}
               alt="Sandwich 01"
@@ -57,7 +57,7 @@ export function Carrusel() {
           </div>
           <div className="carousel-item">
             <img
-              src="/Sandwich07.jpg"
+              src="/Sandwich07.webp"
               className="d-block w-100 object-fit-cover"
               style={{ height: '500px', objectFit: 'cover' }}
               alt="Sandwich 02"
