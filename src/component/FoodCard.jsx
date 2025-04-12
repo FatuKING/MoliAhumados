@@ -1,5 +1,6 @@
 import { useCart } from '../hooks/useCart.js'
 import { ShowImg } from './ShowImg.jsx'
+import { QuantitySelector } from './QuantitySelector.jsx'
 
 export function FoodCard ({ products }) {
   const { addToCart } = useCart()
@@ -20,12 +21,7 @@ export function FoodCard ({ products }) {
                   <div className='d-flex justify-content-between align-items-center foodControl'>
                     <span className='fw-semibold bottom-1'>{`$${product.price}`}</span>
 
-                    <div className='d-flex gap-1 align-items-center'>
-                    <button className='btn btn-dark btnAddCart rounded' onClick={() => addToCart(product)}><i className='bi bi-dash-lg' /></button>
-                    <span className='fw-semibold'>0</span>
-                    <button className='btn btn-dark btnAddCart rounded' onClick={() => addToCart(product)}><i className='bi bi-plus-lg' /></button>
-                    </div>
-  
+                    <QuantitySelector></QuantitySelector>
                   </div>
                
                 </div>
