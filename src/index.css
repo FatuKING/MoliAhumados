@@ -146,19 +146,29 @@ header {
 
 .figure {
   aspect-ratio: 1/1;
-  height: 120px;
+  height: 140px;
   border: 50%;
 }
 
 .figureImg{
-  aspect-ratio: 1/1;
-  height: 120px;
-  padding: 10px;
+  margin: 0;
+  padding: 0;
+  width: 9rem;
+  height: 7rem;
+  cursor: pointer;
 }
 
-.img {
+.figureImg .img{
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: 100%;
   width: 100%;
+  object-fit: cover;
+}
+
+.figureImg:hover .img{
+  filter: brightness(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Moli Ahumado Titulo  */
@@ -167,15 +177,20 @@ header {
   line-height: 0.5;
 }
 
+.accordion-collapse{
+  padding: 0px;
+}
+
 .food {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  height: auto;
-  padding-left: 22px;
 }
 
 .foodContainer{
-  display: flex;
-  justify-content: space-between;
+  display: flex; 
+  justify-items: center;
+  border: #000000 1px solid;
 }
 
 .accordion-button:focus{
@@ -184,16 +199,28 @@ header {
   color: none;
 }
 
+.accordion-body{
+  display: flex;
+  justify-content: space-between;
+  border: #e0e0e0 1px solid;
+  border-radius: 0.5rem;
+  padding: 10px;
+}
+
 .foodCard {
   display: flex;
   width: 100%;
   flex-direction: column;
-  padding-top: 10px;
+  justify-content: space-between;
 }
 
 .foodDescription {
-  width: 85%;
-  font-size: 13px;
+  max-width: 75%;
+  font-size: 0.8rem;
+}
+
+.foodControl{
+  max-width: 95%;
 }
 
 /* Boton open */
@@ -207,13 +234,6 @@ header {
   bottom: 26px;
 }
 
-.contenedorImg{
-  position: relative;
-  width: 100%;
-  display: grid;
-  place-items: center;
-  z-index: 2;
-}
 
 .imgBackground {
   position: absolute;

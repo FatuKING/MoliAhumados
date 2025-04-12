@@ -10,13 +10,24 @@ export function FoodCard ({ products }) {
         products.map((product, index) => {
           return (
             <section key={index} className='food'>
-              <article className='foodContainer'>
-                <div className='foodCard position-relative'>
-                  <h3 className='fs-5 fw-bold lh-1'>{product.product}</h3>
-                  <span className='foodDescription text-body-secondary fw-semibold lh-sm'>{product.description}</span>
+              <article className='accordion-body'>
+                <div className='foodCard'>
+                  <div className='foodDescription'>
+                    <h3 className='fs-5 fw-bold'>{product.product}</h3>
+                    <span className='text-body-secondary fw-semibold'>{product.description}</span>
+                  </div>
 
-                  <span className='fw-bold position-absolute bottom-1'>{`$${product.price}`}</span>
-                  <button className='btn btn-dark btnAddCart position-absolute bottom-1 end-0 rounded' onClick={() => addToCart(product)}><i className='bi bi-plus-lg' /></button>
+                  <div className='d-flex justify-content-between align-items-center foodControl'>
+                    <span className='fw-semibold bottom-1'>{`$${product.price}`}</span>
+
+                    <div className='d-flex gap-1 align-items-center'>
+                    <button className='btn btn-dark btnAddCart rounded' onClick={() => addToCart(product)}><i className='bi bi-dash-lg' /></button>
+                    <span className='fw-semibold'>0</span>
+                    <button className='btn btn-dark btnAddCart rounded' onClick={() => addToCart(product)}><i className='bi bi-plus-lg' /></button>
+                    </div>
+  
+                  </div>
+               
                 </div>
 
                 <ShowImg img={product.img} />

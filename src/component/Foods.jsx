@@ -26,7 +26,7 @@ export function Foods ({ name, url, id }) {
             {name}
           </button>
         </h2>
-        <div id={id} className='accordion-collapse collapse contenedorImg' data-bs-parent='#accordionFoods'>
+        <div id={id} className='accordion-collapse collapse' data-bs-parent='#accordionFoods'>
           <FoodCard products={data} id='collapseOne' />
         </div>
       </div>
