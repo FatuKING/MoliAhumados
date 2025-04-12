@@ -258,8 +258,8 @@ header {
 .modalContenedor{
   display: grid;
   place-items: center;
-  height: 300px;
-  width: 300px;
+  height: 340px;
+  width: 340px;
 }
 
 .modalImg {
@@ -268,12 +268,14 @@ header {
   object-fit: cover;
 }
 
+
 .btnAddCart{
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 14px;
 }
                                    
 /* Animaciones */
