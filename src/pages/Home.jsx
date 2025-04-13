@@ -5,7 +5,7 @@ import { Logo } from '../component/Logo.jsx'
 import { Foods } from '../component/Foods.jsx'
 
 export function Home () {
-  const { state, handleView } = useCart()
+  const { state } = useCart()
 
   const numberOfItems = state.length
 
@@ -42,7 +42,7 @@ export function Home () {
               <a key={index} href={link.url} target='_blank' rel='noreferrer'> <i className={link.icon} style={{ color: 'black', fontSize: '24px' }}></i> </a>
             ))
           }
-          <Link to='/cart' className='bi bi-cart4 btnCart' onClick={handleView}>{numberOfItems ? <div className='numberCart jello-horizontal'>{numberOfItems}</div> : null} </Link>
+          <Link to='/cart' className='bi bi-cart4 btnCart'>{numberOfItems ? <div className='numberCart jello-horizontal'>{numberOfItems}</div> : null} </Link>
         </div>
 
         <div className='accordion' id='accordionFoods'>
