@@ -54,7 +54,9 @@ export function Home () {
 
         <div className='accordion' id='accordionFoods'>
           {loading ? ( 
-            <p>Cargando categorías...</p>
+            <div className='d-flex justify-content-center align-items-center pt-5'>
+              <span class="spinner"></span>
+            </div>
           ) : (
             categories.map((category, index) => (
               <Foods key={index} name={category} id={`collapse${index}`} />
