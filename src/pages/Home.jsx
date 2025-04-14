@@ -59,7 +59,7 @@ export function Home () {
             </div>
           ) : (
             categories.map((category, index) => (
-              <Foods key={index} name={category} id={`collapse${index}`} />
+              <Foods key={index} category={category} id={`collapse${index}`} />
             ))
           )}
         </div>

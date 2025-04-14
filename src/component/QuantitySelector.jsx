@@ -1,6 +1,6 @@
 import { useCart } from "../hooks/useCart"
 
-export function QuantitySelector () {
+export function QuantitySelector ({product}) {
     const { addToCart } = useCart()
 
     return (

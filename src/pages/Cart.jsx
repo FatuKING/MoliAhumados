@@ -62,10 +62,10 @@ export function Cart () {
                 state.map((products, index) => {
                   return (
                     <article key={index} className='d-flex justify-content-between align-items-center' style={{ height: '100px' }}>
-                      <img src={products.img} alt={products.img} className='cartImg' />
+                      <img src={products.image} alt={products.image} className='cartImg' />
 
                       <div className='d-flex justify-content-center' style={{ width: '120px' }}>
-                        <h3 className='cartText fw-semibold'>{products.product}</h3>
+                        <h3 className='cartText fw-semibold'>{products.name}</h3>
                       </div>
 
                       <div className='d-flex justify-content-center gap-2 align-items-center' style={{ width: '100px' }}>

@@ -1,4 +1,4 @@
-import { createContext, useState, useReducer } from 'react'
+import { createContext, useReducer } from 'react'
 
 export const CartContext = createContext()
 
@@ -10,7 +10,7 @@ const reducer = (state, action) => {
   switch (actionType) {
     case 'addToCart': {
       const { product } = actionPayload
-      const productIndex = state.findIndex(item => item.product === product)
+      const productIndex = state.findIndex(item => item.name === product)
 
       if (productIndex >= 0) {
         const newState = structuredClone(state)
@@ -80,7 +80,6 @@ const reducer = (state, action) => {
 
 export function CartProvider ({ children }) {
   const [state, dispatch] = useReducer(reducer, initialState)
-  const [viewCart, setViewCart] = useState(false)
 
   const addToCart = product => dispatch({
     type: 'addToCart',
@@ -104,23 +103,11 @@ export function CartProvider ({ children }) {
     payload: product
   })
 
-  const handleView = () => {
-    if (state.length > 0) {
-      setViewCart(!viewCart)
-    }
-  }
-
-  const closeCart = () => {
-    setViewCart(!viewCart)
-  }
 
   return (
     <CartContext.Provider value={{
       state,
-      viewCart,
-      closeCart,
       addToCart,
-      handleView,
       deleteItemCart,
       resetToCart,
       increaseItemQuantity,
