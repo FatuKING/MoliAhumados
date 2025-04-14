@@ -1,22 +1,10 @@
 import { FoodCard } from './FoodCard.jsx'
-import { api } from '../logic/api.js'
-import { useState, useEffect } from 'react'
+import { useData } from '../hooks/useData.js'
 
-export function Foods ({ name, url, id }) {
-  const [data, setData] = useState([])
+export function Foods ({ name, id }) {
+  const { data } = useData()
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const result = await api(url)
-        setData(result)
-      } catch (error) {
-        console.error('Error fetching data:', error)
-      }
-    }
-
-    fetchData()
-  }, [])
+  console.log(data[name])
 
   return (
     <>
@@ -27,7 +15,7 @@ export function Foods ({ name, url, id }) {
           </button>
         </h2>
         <div id={id} className='accordion-collapse collapse' data-bs-parent='#accordionFoods'>
-          <FoodCard products={data} id='collapseOne' />
+          <FoodCard products={data[name]} id='collapseOne' />
         </div>
       </div>
 

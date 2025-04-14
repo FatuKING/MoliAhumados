@@ -3,11 +3,18 @@ import { Link } from 'react-router-dom'
 import { Carrusel } from '../component/Carrusel.jsx'
 import { Logo } from '../component/Logo.jsx'
 import { Foods } from '../component/Foods.jsx'
+import { useData } from '../hooks/useData.js'
+import { useEffect } from 'react'
 
 export function Home () {
+  const { categories, setData, loading } = useData() 
   const { state } = useCart()
 
   const numberOfItems = state.length
+
+  useEffect(() => {
+    setData(); 
+  }, []);
 
   const urlLink = [{
     url: 'https://wa.me/5491124037996',
@@ -46,9 +53,13 @@ export function Home () {
         </div>
 
         <div className='accordion' id='accordionFoods'>
-          <Foods name='Promociónes' id='collapseOne' url={import.meta.env.VITE_API_PROMOTIONS} />
-          <Foods name='Sandwich Ahumados' id='collapseTwo' url={import.meta.env.VITE_API_SANDWICHS} />
-          <Foods name='Empanadas' id='collapseThree' url={import.meta.env.VITE_API_EMPANADAS} />
+          {loading ? ( 
+            <p>Cargando categorías...</p>
+          ) : (
+            categories.map((category, index) => (
+              <Foods key={index} name={category} id={`collapse${index}`} />
+            ))
+          )}
         </div>
       </main>
 

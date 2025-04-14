@@ -1,4 +1,8 @@
+import { useCart } from "../hooks/useCart"
+
 export function QuantitySelector () {
+    const { addToCart } = useCart()
+
     return (
         <>
         <div className='d-flex gap-1 align-items-center border rounded'>
