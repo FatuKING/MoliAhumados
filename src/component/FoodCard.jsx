@@ -19,7 +19,7 @@ export function FoodCard ({ products }) {
                   <div className='d-flex justify-content-between align-items-center foodControl'>
                     <span className='fw-semibold bottom-1'>{`$${product.price}`}</span>
 
-                    <QuantitySelector product={product}></QuantitySelector> {/* Cambiado a 'product' en singular */}
+                    <QuantitySelector product={product}></QuantitySelector> 
                   </div>
                
                 </div>

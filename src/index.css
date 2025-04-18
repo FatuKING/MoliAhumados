@@ -50,15 +50,12 @@ main{
   z-index: 30;
 }
 
-.cartText {
-  text-align: center;
-  font-size: 18px;
-}
 
 .cartImg{
   height: 100px;
   width: 100px;
   object-fit: cover;
+  border-radius: 0.5rem;
 }
 
 .inputCart{
