@@ -59,13 +59,15 @@ export function Cart () {
 
           <h2 className=' fw-semibold p-2 m-0 fs-5'>Productos</h2>
           <section className='d-flex flex-column'>
-            {
+            <article className='productsCart'>
+              {
                 state.map((products) => {
                   return (
                     <ItemCart key={products.id} products={products} />
                   )
                 })
-            }
+              }
+            </article>
 
             <div className='d-flex justify-content-center pt-4'>
               <button className='btn btn-link text-black' onClick={resetToCart}>Limpiar Carrito</button>

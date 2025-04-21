@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { ModalImg } from './Portals/ModalImg.jsx'
 
-export function ShowImg ({ img }) {
+export function ShowImg ({ img, id }) {
   const [viewImg, setViewImg] = useState(false)
 
   const showImg = () => {
@@ -10,7 +10,7 @@ export function ShowImg ({ img }) {
   return (
     <>
       <figure className='figureImg'>
-        <img onClick={showImg} src={img} className='img rounded' alt={img} />
+        <img onClick={showImg} src={img} className='img rounded' alt={`Producto ${id}`}/>
       </figure>
 
       {

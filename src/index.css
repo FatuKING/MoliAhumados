@@ -50,12 +50,23 @@ main{
   z-index: 30;
 }
 
+.productsCart{
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.itemCart {
+  border-radius: 0.5rem;
+}
 
 .cartImg{
   height: 100px;
   width: 100px;
   object-fit: cover;
-  border-radius: 0.5rem;
+  border-radius: 0.6rem;
 }
 
 .inputCart{

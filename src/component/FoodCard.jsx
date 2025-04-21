@@ -24,7 +24,7 @@ export function FoodCard ({ products }) {
                
                 </div>
 
-                <ShowImg img={product.image} />
+                <ShowImg img={product.image} id={product.id}/>
               </article>
             </section>
           )
