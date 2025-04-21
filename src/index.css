@@ -26,7 +26,7 @@
   inset: 0;
   z-index: -10;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background-color: white;
   background-repeat: repeat;
   background-image: 
@@ -160,6 +160,10 @@ header {
   align-items: center;
 } 
 
+.maxWidth {
+  width: 100%;
+}
+
 @media only screen and (max-width: 767px) {
   .carousel-inner{
     height: 240px;
@@ -168,6 +172,18 @@ header {
     justify-content: center center;
     align-items: center;
   } 
+
+  .cartImg{
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+    border-radius: 0.6rem;
+  }
+
+  .text {
+    font-size: 14px;
+    text-align: center;
+  }
 }
 
 .figure {
