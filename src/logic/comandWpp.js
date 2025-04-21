@@ -4,7 +4,7 @@ const generateMessage = (cart, formData) => {
   let message = '*Hola, quiero realizar el siguiente pedido:*\n\n'
 
   cart.forEach(item => {
-    message += `*- ${item.product} x ${item.quantity} ($${item.priceEnd})*\n`
+    message += `*- ${item.name} x ${item.quantity} ($${item.priceEnd})*\n`
   })
 
   message += `\n*Forma de entrega: ${formData.deliveryMethod}*`

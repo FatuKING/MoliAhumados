@@ -60,11 +60,13 @@ main{
 
 .itemCart {
   border-radius: 0.5rem;
+  padding: 10px;
 }
 
+
 .cartImg{
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
   object-fit: cover;
   border-radius: 0.6rem;
 }
@@ -380,6 +382,12 @@ header {
   height: 8px;
   border-radius: 50%;
   background: white;
+}
+
+.cartInputs{
+  min-height: 48px;
+  display: flex;
+  align-items: center;
 }
 
 /* Loading */
