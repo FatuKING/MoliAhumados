@@ -33,21 +33,6 @@ const reducer = (state, action) => {
       return initialState
     }
 
-    case 'increaseItemQuantity': {
-      const { product } = action.payload
-      const productIndex = state.findIndex(item => item.id === product.id) 
-
-      if (productIndex >= 0) {
-        const newState = structuredClone(state)
-        newState[productIndex].quantity += 1
-        newState[productIndex].priceEnd = newState[productIndex].quantity * newState[productIndex].price
-
-        return newState
-      }
-
-      return state
-    }
-
     case 'deleteItem': {
       const { id } = action.payload
       const productIndex = state.findIndex(item => item.id === id) 
