@@ -22,6 +22,12 @@ export function Cart () {
           <section className='d-flex flex-column'>
             <article className='productsCart border-bottom'>
               {
+                state.length === 0
+                  ? 
+                  <figure className='logoCart'>
+                    <img src="moliLogo.png" alt="" />
+                  </figure>
+                  :
                 state.map((products) => {
                   return (
                     <ItemCart key={products.id} products={products} />
