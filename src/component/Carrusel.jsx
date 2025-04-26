@@ -8,9 +8,9 @@ export function Carrusel() {
   const [open, setOpen] = useState(() => clock());
 
   const images = [
-    '/Sandwich05.webp',
-    '/Sandwich00.webp',
-    '/Sandwich07.webp',
+    'https://kky9ks5rg3.ufs.sh/f/d3KJoNhJrxASMqyKy5U9JL54QHd1c6PylU2i0WREeCOkYxwX',
+    'https://kky9ks5rg3.ufs.sh/f/d3KJoNhJrxASfHjQHQ8nuqabjFJpCIkozAesd53BlwL92TZS',
+    'https://kky9ks5rg3.ufs.sh/f/d3KJoNhJrxAS7DpEq91rlznQJkLC30cHKjNYa7ieSuZbvoqF',
   ];
 
   useEffect(() => {

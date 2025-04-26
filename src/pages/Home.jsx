@@ -10,7 +10,7 @@ export function Home () {
   const { categories, setData, loading } = useData() 
   const { state } = useCart()
 
-  const numberOfItems = state.length
+  const numberOfItems = state.reduce((total, product) => total + product.quantity, 0)
 
   useEffect(() => {
     setData(); 

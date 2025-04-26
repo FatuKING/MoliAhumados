@@ -16,4 +16,4 @@ export const useData = create((set) => ({
       set({ loading: false }) 
     }
   } 
-}));
+}))
